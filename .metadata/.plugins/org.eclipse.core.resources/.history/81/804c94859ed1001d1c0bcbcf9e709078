@@ -1,0 +1,22 @@
+package com.gaurav.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.gaurav.dto.EmployeeDTO;
+import com.gaurav.model.Employee;
+import com.gaurav.service.EmployeeService;
+import com.gaurav.service.impl.EmployeeServiceImpl;
+
+@RestController
+public class EmployeeController {
+	@Autowired
+	private EmployeeService empService;
+	@PostMapping("/employee")
+	public EmployeeDTO saveEmployee(EmployeeDTO eDTO) {
+		// TODO Auto-generated method stub
+		 return empService.saveEmployee(eDTO);
+	}
+
+}

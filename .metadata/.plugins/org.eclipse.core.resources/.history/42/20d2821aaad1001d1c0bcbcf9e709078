@@ -1,0 +1,8 @@
+package com.gaurav.model;
+
+public class Company {
+
+	private int comid;
+	private String name;
+	private String loc;
+}

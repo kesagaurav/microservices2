@@ -1,0 +1,8 @@
+package com.gaurav.service;
+
+import com.gaurav.dto.EmployeeDTO;
+import com.gaurav.model.Employee;
+
+public interface EmployeeService {
+	public EmployeeDTO saveEmployee(EmployeeDTO eDTO);
+}

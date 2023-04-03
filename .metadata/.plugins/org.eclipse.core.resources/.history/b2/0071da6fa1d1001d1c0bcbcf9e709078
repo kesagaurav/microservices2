@@ -1,0 +1,30 @@
+package com.gaurav.dto;
+
+import com.gaurav.model.Employee;
+
+import lombok.Data;
+
+@Data
+public class EmployeeDTO {
+	private int empid;
+	private String name;
+	private String desc;
+	
+	public  Employee dtoToEmployee() {
+		Employee e=new Employee();
+		e.setEmpid(this.getEmpid());
+		e.setName(this.getName());
+		e.setDesc(this.getDesc());
+		return e;
+	}
+	
+	
+	
+	public  EmployeeDTO employeeToDto(Employee emp) {
+		EmployeeDTO eDTO=new EmployeeDTO();
+		eDTO.setEmpid(emp.getEmpid());
+		eDTO.setName(emp.getName());
+		eDTO.setDesc(emp.getDesc());
+		return eDTO;
+	}
+}

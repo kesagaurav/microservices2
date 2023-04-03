@@ -1,0 +1,12 @@
+package com.gaurav.service;
+import java.util.*;
+
+import com.gaurav.dto.CompanyDTO;
+import com.gaurav.model.Company;
+
+
+public interface CompanyService {
+	public Company saveEmployee(CompanyDTO cDTO);
+	public CompanyDTO getEmployeeById(int id);
+	List<CompanyDTO> getAllEmployees();
+}

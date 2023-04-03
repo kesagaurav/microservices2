@@ -1,0 +1,28 @@
+package com.gaurav.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gaurav.dto.EmployeeDTO;
+import com.gaurav.model.Employee;
+import com.gaurav.repository.EmployeeRepository;
+import com.gaurav.service.EmployeeService;
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	@Autowired
+	private EmployeeRepository empRepository;
+	
+	private EmployeeDTO eDTO1;
+	@Override
+	public EmployeeDTO saveEmployee(EmployeeDTO eDTO) {
+		Employee e=new Employee();
+		e=eDTO.dtoToEmployee(eDTO);
+		// TODO Auto-generated method stub
+		eDTO.employeeToDto(e);
+		
+		
+		
+		return empRepository.save(eDTO);
+	}
+
+}
