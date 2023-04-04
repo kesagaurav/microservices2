@@ -24,7 +24,7 @@ public class Employee {
 	private int empid;
 	private String name;
 	private String desc;
-	private Integer compId;
+	private Integer compid;
 	
 	
 }

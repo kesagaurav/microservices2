@@ -1,0 +1,10 @@
+package com.gaurav.dto;
+
+import lombok.Data;
+
+@Data
+public class CompanyDTO {
+	public int comid;
+	public String name;
+	public String loc;
+}
